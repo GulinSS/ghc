@@ -1,12 +1,12 @@
 test_task:
   arm_container:
-    image: haskell:9.10.1
+    image: haskell:9.10.1-bullseye
     cpu: 2
     memory: 8G
   test_script:
-    - deb http://deb.debian.org/debian bullseye-backports main
+    - wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+    - sudo apt-add-repository https://dl.winehq.org/wine-builds/debian/
     - sudo apt update
-    - sudo apt install wine/bullseye-backports libwine/bullseye-backports fonts-wine/bullseye-backports libvkd3d1/bullseye-backports libz-mingw-w64/bullseye-backports
 
     # - cabal install alex
 
