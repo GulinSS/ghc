@@ -4,5 +4,9 @@ test_task:
     cpu: 2
     memory: 8G
   test_script:
-    - cabal install alex
+    - deb http://deb.debian.org/debian bullseye-backports main
+    - sudo apt update
+    - sudo apt install wine/bullseye-backports libwine/bullseye-backports fonts-wine/bullseye-backports libvkd3d1/bullseye-backports libz-mingw-w64/bullseye-backports
+
+    # - cabal install alex
 
