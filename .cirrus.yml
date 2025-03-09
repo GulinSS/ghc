@@ -1,6 +1,8 @@
-arm_container:
-  image: alpine:latest
-  cpu: 2
-  memory: 8G
+test_task:
+  arm_container:
+    image: alpine:latest
+    cpu: 2
+    memory: 8G
+  test_script:
+    - echo "Here comes more than one script!"
 
-script: echo 1
