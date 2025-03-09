@@ -1,8 +1,8 @@
 test_task:
   arm_container:
-    image: alpine:latest
+    image: haskell:9.10.1
     cpu: 2
     memory: 8G
   test_script:
-    - echo "Here comes more than one script!"
+    - cabal install alex
 
