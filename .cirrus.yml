@@ -4,9 +4,9 @@ test_task:
     cpu: 2
     memory: 8G
   test_script:
-    - wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-    - sudo apt-add-repository https://dl.winehq.org/wine-builds/debian/
-    - sudo apt update
+    - wget -qO - https://dl.winehq.org/wine-builds/winehq.key | apt-key add -
+    - apt-add-repository https://dl.winehq.org/wine-builds/debian/
+    - apt update
 
     # - cabal install alex
 
