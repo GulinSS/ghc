@@ -1,0 +1,6 @@
+arm_container:
+  image: alpine:latest
+  cpu: 2
+  memory: 8G
+
+script: echo 1
